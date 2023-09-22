@@ -7,7 +7,7 @@ btn.addEventListener("click", () => {
 });
 
 // search bar
-const product = [
+const camps = [
   {
     id: 0,
     image: "src/Assets/Camp Images/Compressed Images/MountUlap.jpg",
@@ -53,7 +53,7 @@ const product = [
 
 const categories = [
   ...new Set(
-    product.map((item) => {
+    camps.map((item) => {
       return item;
     })
   ),
@@ -80,7 +80,7 @@ const displayItem = (items) => {
                     </p>
                 </div> 
                 <div class="overflow-hidden text-center">
-                    <a href="#" class="my-3 font-bold w-full py-3 block rounded-md border-gray-300 border-solid border-[1px] hover:bg-black hover:text-white hover:border-black view-campground-button" data-campground-id="1">
+                    <a href="indiv.html" class="my-3 font-bold w-full py-3 block rounded-md border-gray-300 border-solid border-[1px] hover:bg-black hover:text-white hover:border-black view-campground-button" data-campground-id="1">
                     View campground
                     </a>
                 </div>
@@ -91,64 +91,88 @@ const displayItem = (items) => {
 };
 displayItem(categories);
 
-// Searching for camps using their names
 
-// Viewing individual campground
 
-function viewCampground(campgroundId) {
-  // Redirect to the individual page with the campgroundId as a query parameter
-  window.location.href = `indiv2.html?campgroundId=${campgroundId}`;
-}
-const campgrounds = [
-  {
-    id: 1,
-    name: "Campground 1",
-    description: "This is the first campground.",
-  },
-  {
-    id: 2,
-    name: "",
-    description: "This is the second campground.",
-    // Add more properties as needed
-  },
-  {
-    id: 3,
-    name: "Campground 3",
-    description: "This is the second campground.",
-    // Add more properties as needed
-  },
-  {
-    id: 4,
-    name: "Campground 4",
-    description: "This is the second campground.",
-    // Add more properties as needed
-  },
-  {
-    id: 5,
-    name: "Campground 5",
-    description: "This is the second campground.",
-    // Add more properties as needed
-  },
-  {
-    id: 6,
-    name: "Campground 6",
-    description: "This is the second campground.",
-    // Add more properties as needed
-  },
-];
 
-document.addEventListener("DOMContentLoaded", () => {
-  const campgroundButtons = document.querySelectorAll(
-    ".view-campground-button"
-  );
+// const indivcamps = [
+//     {
+//       id: 0,
+//       image: "src/Assets/Camp Images/Compressed Images/MountUlap.jpg",
+//       title: "Mount Ulap",
+//       price: "$104.99",
+//       name: "Andrew Mike",
+//     },
+  
+//     {
+//       id: 1,
+//       image: "src/Assets/Camp Images/Compressed Images/CalaguasIsland.jpg",
+//       title: "Calaguas Island",
+//       price: "$150.99",
+//       name: "Henry Roberts",
+//     },
+  
+//     {
+//       id: 2,
+//       image: "src/Assets/Camp Images/Compressed Images/OnayBeach.jpg",
+//       title: "Onay Beach",
+//       price: "$234.99",
+//       name: "John Doe",
+//     },
+  
+//     {
+//       id: 3,
+//       image: "src/Assets/Camp Images/Compressed Images/SevenSistersWaterfall.jpg",
+//       title: "Seven Sisters Waterfall",
+//       price: "$304.99",
+//       name: "Leon King",
+//     },
+  
+//     {
+//       id: 4,
+//       image: "src/Assets/Camp Images/Compressed Images/LatikRiverside.jpg",
+//       title: "Latik Riverside",
+//       price: "$290.99",
+//       name: "James Jones",
+//     },
+  
+//     {
+//       id: 5,
+//       image: "src/Assets/Camp Images/Compressed Images/BuloySprings.jpg",
+//       title: "Buloy Springs",
+//       price: "$254.99",
+//       name: "Grace Price",
+//     },
+//   ];
+  
+//   const campData = [
+//     ...new Set(
+//       indivcamps.map((item) => {
+//         return item;
+//       })
+//     ),
+//   ];
 
-  campgroundButtons.forEach((button) => {
-    button.addEventListener("click", (event) => {
-      event.preventDefault(); // Prevent the default behavior of the anchor tag
 
-      const campgroundId = event.target.dataset.campgroundId;
-      // Redirect to the individual page with the campgroundId as a query parameter
-      window.location.href = `indiv2.html?campgroundId=${campgroundId}`;
-    });
-  });
-});
+//   const displaycamp = (items) => {
+//     document.getElementById("campDetails").innerHTML = items
+//       .map((item) => {
+//         var { image, title, price, name } = item;
+//         return `<img src="${image}" alt="" class="w-full rounded-md">
+//         <div class="flex justify-between items-center my-5">
+//             <h1 class="font-bold text-lg">${title}</h1>
+//             <p>${price}/night</p>
+//         </div> 
+//         <div class="text-gray-800">
+//             ${title} is a 7.7 kilometer moderately trafficked point-to-point trail located near Tuba, Benguet, Philippines that offers the chance to see wildlife and is rated as moderate. The trail is primarily used for hiking.
+//         </div>
+
+//         <p class="py-3 italic text-gray-700">
+//             Submitted by ${name}
+//         </p>`;
+//       })
+//       .join("");
+//   };
+//   displaycamp(campData);
+
+
+  
