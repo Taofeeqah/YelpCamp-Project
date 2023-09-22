@@ -15,4 +15,4 @@ HTML5 Tailwindcss JavaScript
 
 DEPLOYMENT:
 
-The website is deployed using vercel. 
+The website is deployed using vercel and Netflify. 
